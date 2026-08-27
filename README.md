@@ -1,49 +1,56 @@
-🚀 Agentic AI & LLM Engineering: De Fundamentos a Sistemas Inteligentes
-Repositório dedicado ao estudo, prática e desenvolvimento de aplicações orientadas a Agentes de IA, LLMs e Orquestração de Dados. Aqui documento minha evolução técnica, arquiteturas construídas e implementação de padrões de mercado utilizando o ecossistema Python.
+# 🚀 Agentic AI & LLM Engineering: De Fundamentos a Sistemas Inteligentes
 
-🎯 Objetivo do Repositório
-O propósito deste repositório é consolidar conceitos teóricos e práticos do ecossistema de AI Engineering, demonstrando a construção de pipelines eficientes de ingestão de dados, engenharia de contexto, saídas estruturadas e agentes autônomos.
+Repositório dedicado ao estudo, prática e desenvolvimento de aplicações orientadas a **Agentes de IA**, **LLMs** e **Orquestração de Dados**. Aqui documento minha evolução técnica, arquiteturas construídas e implementação de padrões de mercado utilizando o ecossistema Python.
 
-🛠️ Tecnologias & Ferramentas
-Linguagem: Python 3.10+
+---
 
-Frameworks de IA: LangChain, LangGraph, Pydantic (V2)
+## 🎯 Objetivo do Repositório
 
-Provedores de LLM & Inferência: OpenAI API, Groq Cloud (LPU), Ollama (Modelos Locais)
+O propósito deste repositório é consolidar conceitos teóricos e práticos exercitados ao longo do curso **Complete Agentic AI Bootcamp With LangGraph and Langchain** (ministrado por **Krish Naik**). O objetivo é demonstrar a construção de pipelines eficientes de ingestão de dados, engenharia de contexto, saídas estruturadas e agentes autônomos prontos para produção.
 
-Manipulação de Dados & Scraping: BeautifulSoup4 (bs4), WebBaseLoader, TextLoader, Wikipedia API
+---
 
-Ambiente & Configuração: Python-Dotenv, Conda, Virtualenv
+## 🛠️ Tecnologias & Ferramentas
 
-📚 Módulos & Tópicos Práticos
-1. Garantia de Tipos & Structured Output (Pydantic V2)
-Modelagem de Dados: Criação de schemas com BaseModel e validação estrita com Field.
+- **Linguagens & Manipulação de Dados:** Python 3.10+, NumPy, Pandas
+- **Frameworks de IA & Orquestração:** LangChain (LCEL, Chains, Loaders), LangGraph (StateGraphs, ReAct), DeepAgents, AutoGen
+- **Interfaces, APIs & Servidores:** FastAPI, Streamlit, LangServe, Model Context Protocol (MCP)
+- **Provedores de LLMs & Modelos:** OpenAI API, Groq Cloud (LPU), Anthropic (Claude Ecosystem), Ollama (Modelos Locais), HuggingFace
+- **Engenharia de Dados & Scraping:** BeautifulSoup4 (bs4), WebBaseLoader, TextLoader, Wikipedia API, Tavily Search API
+- **Bancos Vetoriais & Busca:** ChromaDB, FAISS, Qdrant, Pinecone
+- **Observabilidade & Avaliação:** LangSmith, LangGraph Studio, Guardrails, LLM Gateways
+- **Desenvolvimento, Ambientes & CI/CD:** VS Code, Cursor IDE, Anaconda/Conda, UV Package Manager, Python-Dotenv, Git/GitHub, Postman
+- **Deploy & Cloud:** Docker, AWS (ECS/Fargate), Render
 
-Dynamic Defaults: Utilização de default_factory para valores dinâmicos por instância.
+---
 
-JSON Schema Generation: Exportação de esquemas via model_json_schema() para passar instruções precisas de Structured Outputs e Function Calling para LLMs.
+---
 
-2. Infraestrutura de LLMs & Provedores
-Multi-Provider Setup: Alternância entre provedores proprietários (OpenAI) e de alta performance/open-weights (Groq).
+## 🗺️ Visão de Aprendizado & Módulos Futuros (Bootcamp Roadmap)
 
-Gestão de Custos & Latência: Execução de modelos abertos (Llama 3.3 70B, DeepSeek R1, GPT-OSS) com cota gratuita via Groq API.
+### 🧠 RAG Avançado & Bancos Vetoriais
+- **Embeddings & Vetores:** Transformação de texto em espaço vetorial e armazenamento em bancos vetoriais (ChromaDB/FAISS/Qdrant/Pinecone).
+- **Estratégias de RAG:** Implementação de Agentic RAG, Corrective RAG (CRAG), Adaptive RAG e Vectorless RAG (PageIndex).
+- **Retrieval Pipelines:** Busca por similaridade (Cosine, MMR) para recuperação de contextos relevantes sem alucinações.
 
-Gerenciamento de Segredos: Manipulação segura de chaves de API com python-dotenv.
+### 🔄 Arquitetura de Agentes & Protocolos Avançados
+- **StateGraphs & ReAct:** Modelagem de tomada de decisão com nós (*Nodes*), rotas condicionais (*Conditional Edges*) e estado compartilhado (`TypedDict`, `DataClass`, `Pydantic`).
+- **Model Context Protocol (MCP):** Integração e criação de servidores MCP com ferramentas (tools) e clientes customizados.
+- **Claude Ecosystem & Deep Agents:** Uso de sub-agentes, hooks, habilidades (skills) e plugins contextuais.
+- **Human-in-the-Loop (HITL):** Pausas no fluxo para validação, edição e aprovação humana em tempo de execução.
+- **Memória & Persistência:** Guardar histórico e estado do agente entre sessões com `Checkpointers`.
 
-3. Ingestão de Dados (Document Loaders)
-Documentos Locais: Carregamento de arquivos estruturados e não estruturados (TextLoader) com validação de encodagem utf-8 e manipulação via pathlib.Path.
+### 🤝 Multi-Agent Systems
+- **Arquitetura Supervisor & Orchestrator-Worker:** Agente gerente que coordena e delega sub-tarefas para agentes especialistas.
+- **Orquestração Paralela & Iterativa:** Execução paralela de agentes e loops de avaliação com padrões Evaluator-Optimizer.
 
-Web Scraping Otimizado: Extração de conteúdo web via WebBaseLoader integrado ao BeautifulSoup4.
+### 🚀 Observabilidade, Deploy & Produção
+- **LangSmith & LangGraph Studio:** Tracing completo de chamadas, latência, consumo de tokens, simulações e debugging de agentes.
+- **Deploy & Cloud:** Criação de interfaces com Streamlit, APIs REST com FastAPI/LangServe, containerização com Docker e hospedagem em cloud (AWS/Render).
 
-Filtros por HTML/CSS: Uso do bs4.SoupStrainer (com class_ e name) para extração direcionada, reduzindo ruído e economizando tokens de contexto.
+---
 
-Simulação de Navegador: Customização de requisições HTTP (header_template com User-Agent) para contornar bloqueios de scraping (ex: Yahoo Finance, Medium).
+## 🎓 Créditos & Referências
 
-APIs de Conhecimento: Integração com WikipediaLoader configurado para busca de conceitos e metadados.
-
-4. Engenharia de Texto & Estratégias de Chunking
-Divisão Recursiva de Texto: Segmentação de documentos densos com RecursiveCharacterTextSplitter.
-
-Preservação Semântica: Uso de separadores hierárquicos (\n\n, \n,  ) para evitar a quebra de palavras e frases no meio.
-
-Janelas de Sobreposição (Overlap): Configuração de chunk_size (limite máximo) e chunk_overlap para manter a continuidade do contexto na transição de blocos para RAG.
+- **Curso:** Complete Agentic AI Bootcamp With LangGraph and Langchain
+- **Instrutor:** Krish Naik - Chief AI Engineer

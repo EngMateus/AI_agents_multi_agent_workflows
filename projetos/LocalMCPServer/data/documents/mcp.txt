@@ -1,0 +1,11 @@
+MCP significa Model Context Protocol.
+
+MCP é um protocolo criado para permitir que aplicações de IA
+interajam de maneira padronizada com ferramentas e fontes
+de dados externas.
+
+Um MCP Server pode disponibilizar tools, resources e prompts
+para um MCP Client.
+
+Neste projeto estamos construindo um MCP Server que fornece
+acesso controlado a arquivos.

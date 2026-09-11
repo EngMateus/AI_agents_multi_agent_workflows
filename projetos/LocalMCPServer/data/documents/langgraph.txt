@@ -1,0 +1,9 @@
+LangGraph é uma biblioteca utilizada para construir
+workflows e agentes baseados em grafos.
+
+Um grafo pode possuir diferentes nodes e edges.
+
+LangGraph permite trabalhar com estado, execução condicional,
+persistência e workflows agentic.
+
+LangGraph pode ser integrado com LangChain e ferramentas externas.

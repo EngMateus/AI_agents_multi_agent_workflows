@@ -1,0 +1,8 @@
+LangChain é um framework utilizado para construir aplicações
+baseadas em modelos de linguagem.
+
+Entre seus recursos estão ferramentas, agentes, mensagens,
+retrieval e integração com diferentes modelos.
+
+LangChain pode ser utilizado em conjunto com LangGraph
+para construir aplicações agentic mais complexas.
